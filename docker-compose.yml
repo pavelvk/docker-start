@@ -6,6 +6,7 @@ services:
     volumes:
       - ./src:/var/www/html
       - ./httpd/httpd.conf:/usr/local/apache2/conf/httpd.conf
+      - ./httpd/logs:/var/log/httpd
     depends_on:
       - php
 
@@ -35,15 +36,15 @@ services:
     volumes:
       - ./mariadb:/var/lib/mysql
     environment:
-      MYSQL_ROOT_PASSWORD: cfgthfdb
+      MYSQL_ROOT_PASSWORD: ${{ secrets.mysql_default_pass }}
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
     links: 
       - mariadb:db
     ports:
-      - 8765:80
+      - 8080:80
     environment:
-      MYSQL_ROOT_PASSWORD: cfgthfdb
+      MYSQL_ROOT_PASSWORD: ${{ secrets.mysql_default_pass }}
     depends_on:
       - mariadb
