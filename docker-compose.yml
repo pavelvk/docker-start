@@ -35,8 +35,8 @@ services:
     image: mariadb:10.3
     volumes:
       - ./mariadb:/var/lib/mysql
-    environment:
-      MYSQL_ROOT_PASSWORD: ${{ secrets.mysql_default_pass }}
+    env_file:
+      - maria.env
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
@@ -44,7 +44,7 @@ services:
       - mariadb:db
     ports:
       - 8080:80
-    environment:
-      MYSQL_ROOT_PASSWORD: ${{ secrets.mysql_default_pass }}
+    env_file:
+     - mysql.env
     depends_on:
       - mariadb

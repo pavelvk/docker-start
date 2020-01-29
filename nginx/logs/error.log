@@ -52,3 +52,5 @@
 2020/01/25 15:15:29 [error] 6#6: *1 directory index of "/var/www/html/" is forbidden, client: 192.168.2.50, server: localhost, request: "GET / HTTP/1.1", host: "192.168.2.22"
 2020/01/25 15:15:29 [error] 6#6: *1 directory index of "/var/www/html/" is forbidden, client: 192.168.2.50, server: localhost, request: "GET / HTTP/1.1", host: "192.168.2.22"
 2020/01/25 15:15:30 [error] 6#6: *1 directory index of "/var/www/html/" is forbidden, client: 192.168.2.50, server: localhost, request: "GET / HTTP/1.1", host: "192.168.2.22"
+2020/01/29 14:11:11 [error] 6#6: *3 open() "/var/www/html/robots.txt" failed (2: No such file or directory), client: 10.0.2.2, server: localhost, request: "GET /robots.txt HTTP/1.1", host: "127.0.0.1:280"
+2020/01/29 14:11:11 [error] 6#6: *1 open() "/var/www/html/favicon.ico" failed (2: No such file or directory), client: 10.0.2.2, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1:280", referrer: "http://127.0.0.1:280/"
