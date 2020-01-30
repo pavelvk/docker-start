@@ -54,3 +54,9 @@
 2020/01/25 15:15:30 [error] 6#6: *1 directory index of "/var/www/html/" is forbidden, client: 192.168.2.50, server: localhost, request: "GET / HTTP/1.1", host: "192.168.2.22"
 2020/01/29 14:11:11 [error] 6#6: *3 open() "/var/www/html/robots.txt" failed (2: No such file or directory), client: 10.0.2.2, server: localhost, request: "GET /robots.txt HTTP/1.1", host: "127.0.0.1:280"
 2020/01/29 14:11:11 [error] 6#6: *1 open() "/var/www/html/favicon.ico" failed (2: No such file or directory), client: 10.0.2.2, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1:280", referrer: "http://127.0.0.1:280/"
+2020/01/30 12:33:39 [error] 6#6: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  Unknown: failed to open stream: Permission denied in Unknown on line 0
+Unable to open primary script: /var/www/html/index.php (Permission denied)" while reading response header from upstream, client: 10.0.2.2, server: localhost, request: "GET / HTTP/1.1", upstream: "fastcgi://172.19.0.3:9000", host: "127.0.0.1:280"
+2020/01/30 12:33:39 [error] 6#6: *3 open() "/var/www/html/robots.txt" failed (2: No such file or directory), client: 10.0.2.2, server: localhost, request: "GET /robots.txt HTTP/1.1", host: "127.0.0.1:280"
+2020/01/30 12:33:39 [error] 6#6: *3 open() "/var/www/html/favicon.ico" failed (2: No such file or directory), client: 10.0.2.2, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1:280", referrer: "http://127.0.0.1:280/"
+2020/01/30 12:33:47 [error] 6#6: *3 open() "/var/www/html/setup" failed (13: Permission denied), client: 10.0.2.2, server: localhost, request: "GET /setup HTTP/1.1", host: "127.0.0.1:280"
+2020/01/30 12:33:55 [error] 6#6: *3 open() "/var/www/html/setup" failed (13: Permission denied), client: 10.0.2.2, server: localhost, request: "GET /setup HTTP/1.1", host: "127.0.0.1:280"
